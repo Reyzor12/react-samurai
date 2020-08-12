@@ -4,7 +4,7 @@ import headerImg from '../../../assets/images/header.jpg';
 import Preloader from "../../common/Preloader/Preloader";
 import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
 
-const ProfileInfo = (profile, status, updateStatus) => {
+const ProfileInfo = ({profile, status, updateStatus}) => {
     if (!profile) {
         return <Preloader/>
     }
@@ -15,7 +15,7 @@ const ProfileInfo = (profile, status, updateStatus) => {
                 <img src={headerImg} />
             </div>
             <div className={s.descriptionBlock}>
-                <img src={profile.photos.large}/>
+                {/*<img src={profile.photos.large}/>*/}
                 <ProfileStatusWithHooks status={status} updateStatus={updateStatus}/>
             </div>
         </div>
